@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.joda.time.DateTime;
+import org.joda.time.JodaTimePermission;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -20,6 +24,18 @@ public class MyListUtilTest
 		my=new MyListUtil();
 	}
 	
+	
+	@Before
+	public void printTimeB() {
+		System.out.println(DateTime.now());
+	}
+	
+
+	@After
+	public void printTimeA() {
+		System.out.println(DateTime.now());
+	}
+	
     @Test
     public void firstTest()
     {
@@ -28,7 +44,7 @@ public class MyListUtilTest
     	
     	assertEquals(listE, listA);
     	assertEquals(listA.size(), listA.size());
-       
+       System.out.println("First test");
     }
     
     @Test
@@ -39,7 +55,8 @@ public class MyListUtilTest
     	
     	assertEquals(listE, listA);
     	assertEquals(listA.size(), listA.size());
-       
+        System.out.println("Second test");
+
     }
     
     @Test
@@ -56,7 +73,11 @@ public class MyListUtilTest
     	
     	assertEquals(listE2, listA2);
     	assertEquals(listA2.size(), listA2.size());
+    	
+        System.out.println("Third test");
+
     }
     
+   
     
 }
