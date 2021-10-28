@@ -7,7 +7,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.joda.time.DateTime;
-import org.joda.time.JodaTimePermission;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -59,7 +58,7 @@ public class MyListUtilTest
 
     }
     
-    @Test
+    @Test //testo gli array vuoti  la loro size deve essere 0
     public void thirdTest()
     {
     	List<Integer> listA=my.sort(new ArrayList<Integer>() ,false);
@@ -68,11 +67,11 @@ public class MyListUtilTest
     	assertEquals(listE, listA);
     	assertEquals(listA.size(), listA.size());
     	
-    	List<Integer> listA2=my.sort(new ArrayList<Integer>() ,true);
-    	List<Integer> listE2= new ArrayList<Integer>();
+    	 listA=my.sort(new ArrayList<Integer>() ,true);
+    	 listE= new ArrayList<Integer>();
     	
-    	assertEquals(listE2, listA2);
-    	assertEquals(listA2.size(), listA2.size());
+    	assertEquals(listE, listA);
+    	assertEquals(listA.size(), listA.size());
     	
         System.out.println("Third test");
 
